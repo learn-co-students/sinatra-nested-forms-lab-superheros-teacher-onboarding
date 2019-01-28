@@ -2,8 +2,8 @@
 <h2>Team Motto:</h2> <%= @team.motto %>
 
 <h1>Heroes</h1>
-<% @super_heroes.each do |hero| %>
-  <h2>Hero <%=@super_heroes.find_index(hero) + 1%></h2>
+<% @super_heroes.each.with_index(1) do |hero, index| %>
+  <h2>Hero <%=index%></h2>
   <p>Hero Name: <%= hero.name %></p>
   <p>Hero Power: <%= hero.power %></p>
   <p>Hero Biography: <%= hero.bio %></p>
